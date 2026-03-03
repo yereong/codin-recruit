@@ -42,7 +42,7 @@ const ApplyForm = () => {
 
     const handleSubmit = async () => {
         const { field, name, phone, email, school, degree, major, portfolioLink, intro1, intro2, intro3 } = formData;
-        if (!field || !name || !phone || !email || !school || !degree || !portfolioLink) {
+        if (!field || !name || !phone || !email || !school || !degree || !intro1 || !intro2 || !intro3) {
         alert("필수 항목을 모두 입력해 주세요.");
         return;
         }
@@ -148,35 +148,35 @@ const ApplyForm = () => {
         {/* 자기소개서 질문 3개 */}
         <div className="mb-10">
             <label className="block font-semibold mb-2">
-            1. 학교 생활 중 가장 열정을 쏟았던 활동은 무엇이며, 어떤 역할을 맡았는지 서술해주세요. <span className="text-sub">({formData.intro1.length? " "+formData.intro1.length+" / " : " "}500자 이내)</span>
+            1. 학교 생활 중 가장 열정을 쏟았던 활동은 무엇이며, 어떤 역할을 맡았는지 서술해주세요.<span className="text-sky-500">*</span> <span className="text-sub">({formData.intro1.length? " "+formData.intro1.length+" / " : " "}300자 이내)</span>
             </label>
-            <textarea name="intro1" value={formData.intro1} onChange={handleChange} maxLength={500} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
+            <textarea name="intro1" value={formData.intro1} onChange={handleChange} maxLength={300} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
         </div>
 
         <div className="mb-10">
             <label className="block font-semibold mb-2">
-            2. 협업 과정에서, 갈등을 해결하기 위한 본인만의 방식이 있다면 서술해주세요. <span className="text-sub">({formData.intro2.length? " "+formData.intro2.length+" / " : " "}500자 이내)</span>
+            2. 협업 과정에서, 갈등을 해결하기 위한 본인만의 방식이 있다면 서술해주세요.<span className="text-sky-500">*</span> <span className="text-sub">({formData.intro2.length? " "+formData.intro2.length+" / " : " "}300자 이내)</span>
             </label>
-            <textarea name="intro2" value={formData.intro2} onChange={handleChange} maxLength={500} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
+            <textarea name="intro2" value={formData.intro2} onChange={handleChange} maxLength={300} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
         </div>
 
         <div className="mb-10">
             <label className="block font-semibold mb-2">
-            3. 선택하신 분야에서, 역량을 높이기 위해 노력하신 경험이 있다면 서술해주세요. <span className="text-sub">({formData.intro3.length? " "+formData.intro3.length+" / " : " "}500자 이내)</span>
+            3. 선택하신 분야에서, 역량을 높이기 위해 노력하신 경험이 있다면 서술해주세요.<span className="text-sky-500">*</span><span className="text-sub">({formData.intro3.length? " "+formData.intro3.length+" / " : " "}300자 이내)</span>
             </label>
-            <textarea name="intro3" value={formData.intro3} onChange={handleChange} maxLength={500} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
+            <textarea name="intro3" value={formData.intro3} onChange={handleChange} maxLength={300} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
         </div>
 
         {/* 포트폴리오 */}
         <div className="mb-16">
             <label className="block font-semibold mb-4">
-            포트폴리오 <span className="text-sky-500">*</span>
+            포트폴리오
             </label>
             <p className="text-sm mb-4">
             지원자 분의 경험이 드러나는 '링크'를 자유롭게 첨부해주세요<br/>
-            <span className="text-gray-400 pt-2">ex) 노션, 구글 드라이브, 깃허브, pdf파일 링크 ...</span>
+            <span className="text-gray-400 pt-2">여러 개 첨부 시 ( , )로 구분해주세요.  </span>
             </p>
-            <input name="portfolioLink" type="url" placeholder="https://example.sample.url ..." value={formData.portfolioLink} onChange={handleChange} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3" />
+            <input name="portfolioLink" type="url" placeholder="노션, 구글 드라이브, 깃허브, pdf파일 링크 ... " value={formData.portfolioLink} onChange={handleChange} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3" />
         </div>
 
         <button type="button" disabled={isSubmitting} onClick={handleSubmit} className="w-full py-4 bg-gradient-to-r from-blue-400 to-blue-500 text-white rounded-xl font-semibold hover:bg-sky-600 transition disabled:cursor-not-allowed disabled:opacity-50">

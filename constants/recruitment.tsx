@@ -100,7 +100,7 @@ export const PARTS_REQUIREMENTS : Requirement[] = [
   },
   {
     link: "backend",
-    skill: "Spring, Redis, MongoDB 등",
+    skill: "Spring, Redis, MongoDB, MySQL, Docker 등",
     requirements: [
       <span>Github를 활용한 협업<span className="text-sub">이 가능하신 분</span></span>,
       <span>Spring Boot 기반의<span className="text-sub"> 개발이 가능하신 분</span></span>,
