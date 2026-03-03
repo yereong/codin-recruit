@@ -46,7 +46,6 @@ const Introduction: React.FC = () => {
             </motion.div>
 
             <motion.div className="relative h-[100vh] flex flex-col items-center justify-center"
-                initial={{ top: "100vh", filter: "brightness(0.55)" }} animate={{ top: 0, filter: "brightness(1)" }} transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1], filter:{ delay:0.9 } }}>
                 <AppPreuse/>
             </motion.div >
             
