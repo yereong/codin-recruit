@@ -106,8 +106,8 @@ const Home: React.FC = () => {
       <div className="relative flex flex-col items-center justify-center w-full h-screen">
         <div id="mainInfo" className="flex flex-col items-center pb-[210px] sm:pb-[90px]">
           <img id="mainInfoImg" src="/logo/logo.png" className="w-[188px] sm:w-[265px]"/>
-          <p id="mainInfoTitle" className="mt-9 font-title font-light sm:mt-10">코딘은 <span className="text-highlight">정보기술대학의 공식 SNS</span>입니다 </p>
-          <p id="mainInfoSubTitle1" className="mt-5 font-subtitle text-sub">단순한 커뮤니티를 넘어, 강의실 현황, 연구실 정보, 비교과 등 </p>
+          <p id="mainInfoTitle" className="mt-9 font-title font-light sm:mt-10">코딘은 <span className="text-highlight">정보기술대학 공식, 인천대학교 SNS</span>입니다 </p>
+          <p id="mainInfoSubTitle1" className="mt-5 font-subtitle text-sub">단순한 커뮤니티를 넘어, 간식나눔 티켓팅, 강의실 현황 등 </p>
           <p id="mainInfoSubTitle2" className="font-subtitle text-sub">대학생활에 꼭 필요한 맞춤형 서비스를 제공하고 있어요 </p>
         </div>
         <BackGroundBlur/>
