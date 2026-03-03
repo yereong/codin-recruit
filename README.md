@@ -5,7 +5,7 @@
 <img width="609" alt="스크린샷 2025-05-03 오후 6 27 23" src="https://github.com/user-attachments/assets/7dbea46d-5953-4d9a-ba40-c33a01904681" />
 
 ## 💻 HOSTING - vercel
-https://codin-recruiting.vercel.app
+https://codin-recruit.vercel.app
 
 ## 📝 DESIGN
 [https://www.figma.com/design/8w3xUGhaDQcir9VaiYha0T/%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4?node-id=0-1&t=VcPDTbuS4MdFBuWC-1](https://www.figma.com/design/Yd7fxwf1Y0LL03i6arejFt/CodIN?node-id=3194-327)

@@ -148,7 +148,7 @@ const ApplyForm = () => {
         {/* 자기소개서 질문 3개 */}
         <div className="mb-10">
             <label className="block font-semibold mb-2">
-            1. 대학 생활 중 가장 열정을 쏟았던 활동은 무엇이며, 어떤 역할을 맡았는지 서술해주세요. <span className="text-sub">({formData.intro1.length? " "+formData.intro1.length+" / " : " "}500자 이내)</span>
+            1. 학교 생활 중 가장 열정을 쏟았던 활동은 무엇이며, 어떤 역할을 맡았는지 서술해주세요. <span className="text-sub">({formData.intro1.length? " "+formData.intro1.length+" / " : " "}500자 이내)</span>
             </label>
             <textarea name="intro1" value={formData.intro1} onChange={handleChange} maxLength={500} className="appearance-none w-full bg-[#0a0a0a] border border-[rgba(224,241,254,0.5)] rounded-lg px-4 py-3 h-40" />
         </div>
