@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const AppPreview: React.FC = () => {
     const images = [
-        '/images/appPreviews/sampleScreen1.png',
-        '/images/appPreviews/sampleScreen2.png',
-        '/images/appPreviews/sampleScreen3.png',
-        '/images/appPreviews/sampleScreen4.png',
-        '/images/appPreviews/sampleScreen5.png',
+        '/images/appPreviews/sampleScreen1.webp',
+        '/images/appPreviews/sampleScreen2.webp',
+        '/images/appPreviews/sampleScreen3.webp',
+        '/images/appPreviews/sampleScreen4.webp',
+        '/images/appPreviews/sampleScreen5.webp',
     ]
     const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 1, containScroll: 'trimSnaps', align:'center', loop: true, });
     const [selectedIndex, setSelectedIndex] = useState(0)
@@ -36,6 +36,7 @@ const AppPreview: React.FC = () => {
                       width={360}
                       height={720}
                       className="rounded-xl w-full h-auto object-cover"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                     />
                 </div>
                 ))}
