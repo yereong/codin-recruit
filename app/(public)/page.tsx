@@ -163,7 +163,7 @@ const Home: React.FC = () => {
       </div>
       <div className="animate-on-scroll flex flex-col items-center justify-center mt-40">
         <Image
-          src="/images/dropEmogis.png"
+          src="/images/dropEmogis.webp"
           alt="이모지 장식"
           width={121}
           height={121}
