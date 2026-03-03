@@ -2,6 +2,7 @@
 
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect, useState } from 'react';
+import Image from "next/image";
 
 const AppPreview: React.FC = () => {
     const images = [
@@ -29,7 +30,13 @@ const AppPreview: React.FC = () => {
                     key={i}
                     className={"shrink-0 px-1 w-1/2 md:w-1/3 lg:w-1/4 transition-opacity bg-[#0a0a0a] "+ ((selectedIndex===i)? " " : "py-[6px] sm:py-[12px] opacity-40")}
                 >
-                    <img src={src} className="rounded-xl w-full h-auto object-cover" />
+                    <Image
+                      src={src}
+                      alt=""
+                      width={360}
+                      height={720}
+                      className="rounded-xl w-full h-auto object-cover"
+                    />
                 </div>
                 ))}
             </div>

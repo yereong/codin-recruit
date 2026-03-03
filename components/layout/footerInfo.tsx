@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 interface RecruitInfoProps {
     title? : string,
 }
@@ -33,7 +34,16 @@ const FooterInfoItem: React.FC<RecuitInfoItemProps> = ({titleEN, titleKR, explai
                     
                     <h1 id="RecuitPartName" className={"font-title font-light flex justify-center items-center "
                         + ((isActive) ? "gap-[9px]":"gap-[6px]")}>
-                        <span className="text-sub">{titleEN}</span>{" "}{titleKR}{" "}<img src={iconPATH} className={"w-[32px] h-[32px] "+ ((isActive) ? "":"hidden")}/>
+                        <span className="text-sub">{titleEN}</span>{" "}{titleKR}{" "}
+                        {iconPATH && (
+                          <Image
+                            src={iconPATH}
+                            alt=""
+                            width={32}
+                            height={32}
+                            className={"w-[32px] h-[32px] "+ ((isActive) ? "":"hidden")}
+                          />
+                        )}
                     </h1>
                 </div>
             </button>
@@ -56,7 +66,13 @@ const FooterInfo: React.FC<RecruitInfoProps> = ({title}) => {
 
 
             <div className="flex justify-end items-center pr-[50%] mt-36 ">
-                <img src="/images/recruitingDeco.png" className="hidden sm:block w-[327px] translate-x-[95%] opacity-0"/>
+                <Image
+                  src="/images/recruitingDeco.png"
+                  alt="리크루팅 장식"
+                  width={327}
+                  height={200}
+                  className="hidden sm:block w-[327px] h-auto translate-x-[95%] opacity-0"
+                />
             </div>
 
             <div className="flex flex-col items-center mt-6 sm:mt-12">
