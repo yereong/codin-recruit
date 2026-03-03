@@ -106,14 +106,17 @@ const Home: React.FC = () => {
     <div className="w-full">
       <div className="relative flex flex-col items-center justify-center w-full h-screen">
         <div id="mainInfo" className="flex flex-col items-center pb-[210px] sm:pb-[90px]">
-          <Image
-            id="mainInfoImg"
-            src="/logo/logo.webp"
-            alt="코딘 로고"
-            width={265}
-            height={100}
-            className="w-[188px] sm:w-[265px] h-auto"
-          />
+        <Image
+          id="mainInfoImg"
+          src="/logo/logo.webp"
+          alt="코딘 로고"
+          width={265}
+          height={100}
+          className="w-[188px] sm:w-[265px] h-auto"
+          sizes="(max-width: 640px) 188px, 265px"
+          priority                
+          fetchPriority="high"   
+        />
           <p id="mainInfoTitle" className="mt-9 font-title font-light sm:mt-10">코딘은 <span className="text-highlight">정보기술대학 공식, 인천대학교 SNS</span>입니다 </p>
           <p id="mainInfoSubTitle1" className="mt-5 font-subtitle text-sub">단순한 커뮤니티를 넘어, 간식나눔 티켓팅, 강의실 현황 등 </p>
           <p id="mainInfoSubTitle2" className="font-subtitle text-sub">대학생활에 꼭 필요한 맞춤형 서비스를 제공하고 있어요 </p>
@@ -128,11 +131,12 @@ const Home: React.FC = () => {
           </RadiantBox>
           <div className="animate-on-scroll-delay flex flex-col w-full items-end">
             <Image
-              src="/images/arrowDown.png"
+              src="/images/arrowDown.webp"
               alt="아래로 스크롤 안내 화살표"
               width={72}
-              height={72}
+              height={182}
               className="mt-6 mr-[28px] w-[36px] sm:mt-12 sm:mr-[64px] sm:w-[72px] h-auto"
+              sizes="(max-width: 640px) 36px, 72px"
             />
             <p className="font-subtitle mt-3">좌우로 넘기며 확인해보세요!</p>
           </div>
@@ -148,11 +152,12 @@ const Home: React.FC = () => {
           aria-label="App Store에서 Codin 앱 다운로드"
         >
           <Image
-            src="/logo/appstore.png"
+            src="/logo/appstore.webp"
             alt="App Store에서 Codin 다운로드"
             width={362}
             height={120}
             className="w-[362px] h-auto opacity-80"
+            sizes="(max-width: 640px) 90vw, 362px"
           />
         </button>
       </div>
@@ -163,6 +168,7 @@ const Home: React.FC = () => {
           width={121}
           height={121}
           className="w-[121px] h-auto"
+          sizes="121px"
         />
       </div>
       <div className="animate-on-scroll flex flex-col items-center justify-center mt-16">
