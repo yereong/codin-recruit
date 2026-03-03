@@ -2,12 +2,10 @@
 import AppPreuse from '@/components/common/appPreuse';
 import BackGroundBlur from '@/components/common/backgroundBlur';
 import RadiantBox from '@/components/common/radiantBox';
-import Footer from '@/components/layout/footer';
 import FooterInfo from '@/components/layout/footerInfo';
 import WaitForImage from '@/components/wrappers/waitForImage';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
 import Image from "next/image";
 const Introduction: React.FC = () => {
     
@@ -22,7 +20,8 @@ const Introduction: React.FC = () => {
 
     return (
     <div id="introduction" className='w-full'>
-        <WaitForImage src="/images/iphone.png">
+        <div className="relative flex flex-col items-center justify-center min-h-[100vh] sm:min-h-screen">
+        <WaitForImage src="/images/iphone.webp">
             <motion.div className="fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex flex-col items-center justify-center w-full h-[66vh] sm:h-screen"
                 initial={{ opacity: 0 }} animate={{ opacity: [1 , 0.5], filter: "blur(16px)" }} transition={{ duration:0.3 , filter: {delay:1, duration: 1.5} }}>
                 <motion.div id="mainInfo" className="flex flex-col items-center pb-[80px]"
@@ -46,6 +45,7 @@ const Introduction: React.FC = () => {
             </motion.div>
 
             <motion.div className="relative h-[100vh] flex flex-col items-center justify-center"
+                initial={{ y: "100vh", filter: "brightness(0.55)" }} animate={{ y: 0, filter: "brightness(1)" }} transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1], filter:{ delay:0.9 } }}>
                 <AppPreuse/>
             </motion.div >
             
@@ -100,6 +100,7 @@ const Introduction: React.FC = () => {
                 </motion.div>
             }
         </WaitForImage>
+        </div>
     </div>
     );
 }
