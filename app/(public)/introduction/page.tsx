@@ -26,7 +26,14 @@ const Introduction: React.FC = () => {
                 initial={{ opacity: 0 }} animate={{ opacity: [1 , 0.5], filter: "blur(16px)" }} transition={{ duration:0.3 , filter: {delay:1, duration: 1.5} }}>
                 <motion.div id="mainInfo" className="flex flex-col items-center pb-[80px]"
                     initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ delay:1.5, duration: 0.3, }}>
-                    <img loading="eager" id="mainInfoImg" src="/logo/logo.png" className="w-[360px] sm:w-[519px] max-w-[80%]"/>
+                    <img
+                        id="mainInfoImg"
+                        src="/logo/logo.png"
+                        className="w-[360px] sm:w-[519px] max-w-[80%]"
+                        loading="eager"
+                        fetchPriority="high"
+                        alt="코딘 로고"
+                    />
                 </motion.div>
             </motion.div>
 
@@ -52,16 +59,30 @@ const Introduction: React.FC = () => {
 
                     <p className='mt-6 sm:mt-12 font-subtitle text-center text-sub mb-32 sm:mb-64'>학교생활에 필요한 서비스를 개발하고, <span className='text-highlight'>실제 서비스</span>로 운영해요 
                     <br/><br/>인천대학교의 공식 도메인 (codin.inu.ac.kr) 발급 등 <br/> 정보기술대학의 지원을 받고 있어요 </p>
-
+                    
                     <RadiantBox>
-                        <h3 className='mb-6 font-titleMega'>다음 목표도 소개할게요!</h3>
+                        <h3 className='mb-6 font-titleMega'>활동 혜택을 소개할게요!</h3>
                         <div className='flex flex-col justify-center items-start gap-3'>
-                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>학생회 공지 등 새로운 기능 구현</p></div>
-                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>전체 페이지를 최적화된 UI/UX로 개선</p></div>
-                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>프레임워크 변경을 통한 로딩 속도 개선</p></div>
+                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>정보기술대학 학기별 활동 장학금 수여</p></div>
+                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>ChatGPT, Adobe 유료 계정 사용</p></div>
+                            <div className='flex whitespace-nowrap gap-3 font-subtitle sm:font-title items-start'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>실제 운영되는 앱 서비스의 팀원으로 활동하고 <br/> 포트폴리오로 활용</p></div>
                         </div>
                     </RadiantBox>
-                    <p className='mt-8 sm:mt-16 font-subtitle text-sub'>( 팀원들의 대기업 진출도 목표하고 있어요 ... )</p>
+
+                    <div className='w-full h-40'></div>
+                    
+                    <RadiantBox>
+                        <h3 className='mb-6 font-titleMega'>CodIN의 다음 목표에요!</h3>
+                        <div className='flex flex-col justify-center items-start gap-3'>
+                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>간식나눔 티켓팅 전 학과 확대</p></div>
+                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>강의실 현황 등 전 학과 맞춤형 서비스 제공</p></div>
+                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>더 안정적인 서비스 운영을 위한 개발 환경 구축</p></div>
+                            <div className='flex whitespace-nowrap items-center gap-3 font-subtitle sm:font-title'><img src="/icons/check.png" className='w-[24px] h-[24px]'/><p>지속적인 리크루팅을 통한 팀 성장</p></div>
+                        </div>
+                    </RadiantBox>
+                    <p className='mt-8 sm:mt-16 font-subtitle text-sub text-center '>( 팀원들의 대기업 진출도 목표하고 있어요 ...) <br/> 실제로 대기업 가신 분도 계셔요🫢</p>
+
+                    
 
                     <div className='w-full'>
                         <FooterInfo title="지금, 새로운 팀원을 모집 중!" />
