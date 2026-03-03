@@ -5,6 +5,7 @@ import { MAX_LAYOUT_WIDTH } from "@/constants/layout";
 import { motion } from 'framer-motion';
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 const PartsDropDown: React.FC = () => {
   const router = useRouter();
@@ -60,8 +61,14 @@ const Header: React.FC = () => {
     return (
       <header className="fixed top-0 left-0 z-100 w-full flex justify-center backdrop-blur-md items-center px-4 sm:px-8 h-[68px] max-h-[68px]">
         <div className="flex justify-between items-center w-full gap-4 py-4" style={{ maxWidth: MAX_LAYOUT_WIDTH }}>
-            <button id="LogoArea" onClick={()=>{handleLogoClick()}}>
-                <img src="/logo/logo_recuiting.png" className="min-w-[102px] sm:min-w-[162px]" width={162}/>
+            <button id="LogoArea" onClick={()=>{handleLogoClick()}} aria-label="홈으로 이동">
+                <Image
+                  src="/logo/logo_recuiting.webp"
+                  alt="코딘 리쿠르팅 로고"
+                  width={162}
+                  height={25.94}
+                  className="min-w-[102px] sm:min-w-[162px] h-auto"
+                />
             </button>
             <div id="BtnsArea" className="text-sm font-medium flex gap-2 sm:gap-4 text-[rgba(255,255,255,0.70)]">
                 <p id="모집기간" className="sm:flex items-center whitespace-nowrap hidden">{RECUITMENT_START_DATE} ~ {RECRUITMENT_END_DATE}</p>
@@ -69,7 +76,7 @@ const Header: React.FC = () => {
                   onMouseEnter={()=>setdropDownHovered(true)} onMouseLeave={()=>setdropDownHovered(false)}>
                   <button className="flex items-center justify-center z-[120]" onClick={()=>{setdropDownHovered((prev)=>!prev)}}> 
                     모집 분야 
-                    <img src="/icons/listdown.svg" width={24}/> 
+                    <Image src="/icons/listdown.svg" alt="리스트 펼치기 아이콘" width={24} height={24}/> 
                   </button>
                   { dropDownHovered && <PartsDropDown/>} 
                 </div>

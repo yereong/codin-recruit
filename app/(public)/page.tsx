@@ -11,6 +11,7 @@ import { ScrollTrigger, } from 'gsap/ScrollTrigger';
 import { Suspense, useEffect, useRef, useState } from "react";
 import { ScrollToPlugin } from "gsap/all";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -105,7 +106,14 @@ const Home: React.FC = () => {
     <div className="w-full">
       <div className="relative flex flex-col items-center justify-center w-full h-screen">
         <div id="mainInfo" className="flex flex-col items-center pb-[210px] sm:pb-[90px]">
-          <img id="mainInfoImg" src="/logo/logo.png" className="w-[188px] sm:w-[265px]"/>
+          <Image
+            id="mainInfoImg"
+            src="/logo/logo.webp"
+            alt="코딘 로고"
+            width={265}
+            height={100}
+            className="w-[188px] sm:w-[265px] h-auto"
+          />
           <p id="mainInfoTitle" className="mt-9 font-title font-light sm:mt-10">코딘은 <span className="text-highlight">정보기술대학 공식, 인천대학교 SNS</span>입니다 </p>
           <p id="mainInfoSubTitle1" className="mt-5 font-subtitle text-sub">단순한 커뮤니티를 넘어, 간식나눔 티켓팅, 강의실 현황 등 </p>
           <p id="mainInfoSubTitle2" className="font-subtitle text-sub">대학생활에 꼭 필요한 맞춤형 서비스를 제공하고 있어요 </p>
@@ -119,7 +127,13 @@ const Home: React.FC = () => {
             <button onClick={()=>{router.push("/introduction")}} className="font-gradient font-pressable font-subtitle font-light mt-[12px]">자세히 알아보기 {'>'} </button>
           </RadiantBox>
           <div className="animate-on-scroll-delay flex flex-col w-full items-end">
-            <img src="/images/arrowDown.png" className="mt-6 mr-[28px] w-[36px] sm:mt-12 sm:mr-[64px] sm:w-[72px]"/>
+            <Image
+              src="/images/arrowDown.png"
+              alt="아래로 스크롤 안내 화살표"
+              width={72}
+              height={72}
+              className="mt-6 mr-[28px] w-[36px] sm:mt-12 sm:mr-[64px] sm:w-[72px] h-auto"
+            />
             <p className="font-subtitle mt-3">좌우로 넘기며 확인해보세요!</p>
           </div>
         </div>
@@ -129,12 +143,27 @@ const Home: React.FC = () => {
       </div>
       <div className="animate-on-scroll flex flex-col items-center justify-center mt-36 mx-4 text-center">
         <h2 className="font-title">지금, <span className="text-[#3E90D5]">{time}</span> 에도 인천대 학생들<br className="block sm:hidden" />에게 운영되고 있어요</h2>
-        <button onClick={()=>location.href="https://apps.apple.com/kr/app/codin/id6742378374"}>
-          <img src="/logo/appstore.png" className="w-[362px] opacity-80"/>
+        <button
+          onClick={()=>location.href="https://apps.apple.com/kr/app/codin/id6742378374"}
+          aria-label="App Store에서 Codin 앱 다운로드"
+        >
+          <Image
+            src="/logo/appstore.png"
+            alt="App Store에서 Codin 다운로드"
+            width={362}
+            height={120}
+            className="w-[362px] h-auto opacity-80"
+          />
         </button>
       </div>
       <div className="animate-on-scroll flex flex-col items-center justify-center mt-40">
-        <img src="/images/dropEmogis.png" className="w-[121px]"/>
+        <Image
+          src="/images/dropEmogis.png"
+          alt="이모지 장식"
+          width={121}
+          height={121}
+          className="w-[121px] h-auto"
+        />
       </div>
       <div className="animate-on-scroll flex flex-col items-center justify-center mt-16">
           <RadiantBox>

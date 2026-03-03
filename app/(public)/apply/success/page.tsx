@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import BackGroundBlur from "@/components/common/backgroundBlur";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Introduction = () => {
     const [index, setIndex] = useState(0);
@@ -45,7 +46,14 @@ const Introduction = () => {
                 <div id="successInfo" className="flex flex-col items-center pb-[210px] sm:pb-[90px]">
                     <p id="successInfoTitle" className="text-[28px] sm:text-[36px] font-bold">지원해주셔서 감사합니다</p>
                     <p id="successInfoSubTitle1" className="mt-2 text-[16px] sm:text-[20px] font-light text-sub">적어주신 주소로 확인 메일을 보내드릴게요</p>
-                    <img id="successInfoImg" src="/images/fireman.png" className="w-[188px] sm:w-[265px] scale-130"/>
+                    <Image
+                      id="successInfoImg"
+                      src="/images/fireman.png"
+                      alt="지원 완료 축하 일러스트"
+                      width={265}
+                      height={265}
+                      className="w-[188px] sm:w-[265px] h-auto scale-130"
+                    />
                 </div>
                 <motion.img
                     src={images[index]}

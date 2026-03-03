@@ -17,6 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="w-full h-full overflow-visible">
+      <head>
+        {/* LCP 이미지 조기 발견: 로고 preload */}
+        <link rel="preload" as="image" href="/logo/logo.webp" />
+        {/* iframe(codin.inu.ac.kr) 연결 가속 */}
+        <link rel="preconnect" href="https://codin.inu.ac.kr" />
+      </head>
       <body className={`antialiased w-full h-full overflow-visible`} >
         {children}
         <InteractiveCursur/>
