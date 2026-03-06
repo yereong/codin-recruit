@@ -5,7 +5,7 @@ import { MAILS } from "@/constants/mails";
 export async function POST(req: Request) {
   try {
     const data = await req.json(); // 보내는 데이터 받기
-    const { name, email, major, portfolioLink, intro1, intro2, intro3 } = data;
+    const { field, name, email, major, portfolioLink, intro1, intro2, intro3 } = data;
 
     // 메일 서버 세팅 
     const transporter = nodemailer.createTransport({
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       from: `"코딘(Codin) 지원 알림" <${process.env.GMAIL_USER}>`,
       bcc: MAILS.join(","), 
       subject: `[알림] 새로운 지원자 접수: ${name}`,
-      text: `새로운 지원자가 접수되었습니다.\n\n이름: ${name}\n이메일: ${email}\n학과/전공: ${major}\n포트폴리오: ${portfolioLink}\n\n문항1: ${intro1}\n문항2: ${intro2}\n문항3: ${intro3}`,
+      text: `새로운 지원자가 접수되었습니다.\n지원파트: ${field}\n이름: ${name}\n이메일: ${email}\n학과/전공: ${major}\n포트폴리오: ${portfolioLink}\n\n문항1: ${intro1}\n문항2: ${intro2}\n문항3: ${intro3}`,
       html: `
         <div style="max-width:640px;margin:0 auto;padding:24px;
                     background:#222222;color:#f3f4f6;
@@ -41,6 +41,10 @@ export async function POST(req: Request) {
 
           <table style="width:100%;border-collapse:collapse;
                         margin-top:12px;font-size:14px;">
+            <tr style="background:#111827;">
+              <td style="padding:10px;font-weight:bold;color:#9ca3af;">지원파트</td>
+              <td style="padding:10px;color:#f3f4f6;">${field}</td>
+            </tr>
             <tr style="background:#1f2937;">
               <td style="padding:10px;font-weight:bold;color:#9ca3af;width:120px;">이름</td>
               <td style="padding:10px;color:#f3f4f6;">${name}</td>

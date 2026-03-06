@@ -83,7 +83,7 @@ const ApplyForm = () => {
             headers: {
             "Content-Type": "application/json",
             },
-            body: JSON.stringify({ name, email, major, portfolioLink, intro1, intro2, intro3 }),  
+            body: JSON.stringify({field, name, email, major, portfolioLink, intro1, intro2, intro3 }),  
         });
 
         /* 제출 완료 */
