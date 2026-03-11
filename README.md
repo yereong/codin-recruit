@@ -18,10 +18,14 @@ https://codin-recruit.vercel.app
 - **IDE** : VisualStudio Code
 - **Framework** : NEXT.js
 
-## 🧑‍🤝‍🧑 맴버구성 (1인 개발)
+## 🧑‍🤝‍🧑 맴버구성
 <p>
     <a href="https://github.com/ParkKyungWan">
-      ParkKyungWan 
+      ParkKyungWan : 초기 개발 및 디자인
+    </a>
+    <br/>
+    <a href="https://github.com/yereong">
+      ChoYeRyeong : 유지보수 및 최적화
     </a>
 </p>
 
